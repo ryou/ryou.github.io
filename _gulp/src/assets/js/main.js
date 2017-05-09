@@ -142,7 +142,7 @@
     },
     el: '#app',
     router: new VueRouter({
-      mode: 'history',
+      // mode: 'history',
       routes: [
         { path: '/', component: IndexComponent },
         { path: '/page/:index/', component: IndexComponent },
@@ -161,7 +161,7 @@
       .then(
         function(json) {
           if (json.meta.status !== 200) {
-            alert('記事リストの取得に失敗しました。')
+            alert('記事リストの取得に失敗しました。');
             return;
           }
           json.data.forEach(function(e, i, a) {
