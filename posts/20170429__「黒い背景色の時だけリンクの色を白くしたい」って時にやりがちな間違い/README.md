@@ -26,7 +26,7 @@
 
 例えば次のようなリンクテキストとボタンモジュールがあるとする
 
-[例1](https://ryou.github.io/blog_atag_reset/examples/example01.html)
+[例1](./examples/example01.html)
 
 HTML/CSSは以下の通り
 
@@ -80,7 +80,7 @@ a:hover {
 
 すると結果は以下のようになります、
 
-[例2](https://ryou.github.io/blog_atag_reset/examples/example02.html)
+[例2](./examples/example02.html)
 
 見て分かる通り、aタグを使用している「.m-btn」の文字色も#fffになってしまい、デザインが崩れてしまっています。CSSの詳細度の厄介な所ですね。
 

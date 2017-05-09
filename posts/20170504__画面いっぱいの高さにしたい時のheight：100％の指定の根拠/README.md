@@ -2,7 +2,7 @@
 
 次の例みたいに、画面にフィットするセクションを作って並べたいって要望が時々ある。
 
-[例1](https://ryou.github.io/blog_height_100percent/examples/example01.html)
+[例1](./examples/example01.html)
 
 ネットで調べればやり方はいくらでも出てきて実装には困らないのですが、仕様上の根拠が知りたかったので備忘録としてメモ。
 
@@ -26,7 +26,7 @@
 
 なので次の例みたいに
 
-[例2](https://ryou.github.io/blog_height_100percent/examples/example02.html)
+[例2](./examples/example02.html)
 
 ```
 <div class="row">
