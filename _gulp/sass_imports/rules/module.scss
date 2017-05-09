@@ -24,6 +24,8 @@ module rule
 }
 
 
+/* .m-article
+----------------------------------------------------------*/
 .m-article {
   .m-article_date {
     font-weight: bold;
@@ -68,10 +70,12 @@ module rule
     width: 100%;
     .m-article_date {
       display: table-cell;
+      vertical-align: top;
       width: 150px;
     }
     .m-article_content {
       display: table-cell;
+      vertical-align: top;
     }
   }
 }

@@ -111,6 +111,8 @@ module rule
         text-align: center;
     }
 }
+/* .m-article
+----------------------------------------------------------*/
 .m-article .m-article_date
 {
     font-weight: bold;
@@ -182,11 +184,15 @@ module rule
     {
         display: table-cell;
 
-        width: 150px;
+        width: 150px; 
+
+        vertical-align: top;
     }
     .m-article .m-article_content
     {
         display: table-cell;
+
+        vertical-align: top;
     }
 }
 /* .m-articleList
