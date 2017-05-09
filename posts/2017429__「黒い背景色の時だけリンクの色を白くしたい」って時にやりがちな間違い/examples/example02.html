@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      color: #00f;
+      text-decoration: underline;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+    .l-container {
+      max-width: 960px;
+      padding: 50px 10px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .m-btn {
+      display: inline-block;
+      background: #ddd;
+      color: #000;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+    .m-btn:hover {
+      opacity: .8;
+    }
+    .bg-black {
+      background: #000;
+    }
+    .bg-black a {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="l-container">
+    <p><a href="#">リンクテキスト</a></p>
+    <p><a href="#" class="m-btn">ボタン</a></p>
+  </div>
+  <!-- /.l-container -->
+  <div class="l-container bg-black">
+    <p><a href="#">リンクテキスト</a></p>
+    <p><a href="#" class="m-btn">ボタン</a></p>
+  </div>
+  <!-- /.l-container -->
+</body>
+</html>

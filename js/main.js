@@ -138,7 +138,7 @@
       var self = this;
       $.ajax({
         type: 'GET',
-        url: 'https://api.github.com/repos/ryou/gh_blog_test/contents/docs/posts',
+        url: 'https://api.github.com/repos/ryou/ryou.github.io/contents/posts',
         dataType: 'jsonp',
         jsonpCallback: 'hoge'
       })
