@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="app">
+    <nav>
+      <router-link to="/">Home</router-link>
+    </nav>
+    <router-view :articles="articles"></router-view>
+  </div>
+
+
+
+  <script type="text/x-template" id="index-component-template">
+    <div>
+      <ul>
+        <li v-for="article in dispArticles"><link-component :article="article"></link-component></li>
+      </ul>
+      <pager-component :current="currentPage" :total="totalPage" @prev="prevPage" @next="nextPage"></pager-component>
+    </div>
+  </script>
+  <script type="text/x-template" id="posts-component-template">
+    <div v-html="content"></div>
+  </script>
+  <script type="text/x-template" id="pager-component-template">
+    <ul>
+      <li v-if="prevIsExist"><router-link :to="prevUrl">Prev</router-link></li>
+      <li v-if="nextIsExist"><router-link :to="nextUrl">Next</router-link></li>
+    </ul>
+  </script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+  <script src="/js/marked.min.js"></script>
+  <script src="/js/main.js"></script>
+
+</body>
+</html>
