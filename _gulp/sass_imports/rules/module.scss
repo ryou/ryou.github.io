@@ -67,6 +67,9 @@ module rule
       color: #777;
       border-left: 0.25em solid #ccc;
     }
+    img {
+      max-width: 100%;
+    }
   }
 }
 @include mq-not-sp {
