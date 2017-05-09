@@ -205,9 +205,22 @@ module rule
 }
 /* .m-articleList
 ----------------------------------------------------------*/
-.m-articleList .m-articleList_item:not(:last-child)
+.m-articleList .m-articleList_item
 {
-    margin-bottom: 2.0rem;
+    position: relative;
+}
+.m-articleList .m-articleList_item:not(:last-child):after
+{
+    display: block;
+
+    width: 40px;
+    height: 5px;
+    margin-top: 3.0rem;
+    margin-bottom: 3.0rem; 
+
+    content: '';
+
+    background: #ddd;
 }
 .m-articleList .m-articleList_itemLink
 {
@@ -244,6 +257,14 @@ module rule
     .m-articleList .m-articleList_itemTit
     {
         display: table-cell;
+    }
+}
+@media only screen and (max-width: 767px)
+{
+    .m-articleList .m-articleList_item:not(:last-child):after
+    {
+        margin-right: auto; 
+        margin-left: auto;
     }
 }
 /***********************************************************************

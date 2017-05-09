@@ -90,8 +90,16 @@ module rule
 ----------------------------------------------------------*/
 .m-articleList {
   .m-articleList_item {
-    &:not(:last-child) {
-      margin-bottom: 2.0rem;
+    position: relative;
+
+    &:not(:last-child):after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 5px;
+      background: #ddd;
+      margin-top: 3.0rem;
+      margin-bottom: 3.0rem;
     }
   }
   .m-articleList_itemLink {
@@ -122,9 +130,13 @@ module rule
     }
   }
 }
-@include mq-not-sp {
+@include mq-sp {
   .m-articleList {
     .m-articleList_item {
+      &:not(:last-child):after {
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
     .m-articleList_itemLink {
     }
