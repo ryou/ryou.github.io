@@ -5,26 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/common.css">
 </head>
 <body>
 
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link>
-    </nav>
-    <router-view :articles="articles"></router-view>
+  <div class="l-container">
+    <div id="app">
+      <header class="l-header">
+        <p class="m-logo"><router-link class="m-logo_txt" to="/">技術メモ</router-link></p>
+      </header>
+      <!-- /.l-header -->
+      <router-view :articles="articles"></router-view>
+
+      <footer class="l-footer"></footer>
+    </div>
   </div>
+  <!-- /.l-container -->
 
   <script type="text/x-template" id="index-component-template">
     <div>
       <ul>
-        <li v-for="article in dispArticles"><link-component :article="article"></link-component></li>
+        <li v-for="article in dispArticles">
+          <link-component :article="article"></link-component>
+        </li>
       </ul>
       <pager-component :current="currentPage" :total="totalPage" @prev="prevPage" @next="nextPage"></pager-component>
     </div>
   </script>
   <script type="text/x-template" id="posts-component-template">
-    <div v-html="content"></div>
+    <div class="m-article" v-html="content"></div>
   </script>
   <script type="text/x-template" id="pager-component-template">
     <ul>

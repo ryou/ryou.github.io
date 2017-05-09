@@ -101,7 +101,7 @@ gulp.task('default', ['build'], function() {
     ghostMode: false
   });
 
-  watch('./src/**/*.scss', function(event) {
+  watch(['./src/**/*.scss', './sass_imports/**/*.scss'], function(event) {
     gulp.start('sass');
   });
   watch([paths.png], function(event) {
