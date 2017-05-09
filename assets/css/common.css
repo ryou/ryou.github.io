@@ -30,7 +30,7 @@ layout rule
 ----------------------------------------------------------*/
 .l-header
 {
-    padding: 1.0rem 0 2.0rem;
+    padding: 1.0rem 0 5.0rem;
 }
 
 /* .l-footer
@@ -111,14 +111,18 @@ module rule
         text-align: center;
     }
 }
-.m-article h1
+.m-article .m-article_date
+{
+    font-weight: bold;
+}
+.m-article .m-article_content h1
 {
     font-size: 2.5rem;
     font-weight: bold;
 
     margin-bottom: 3.0rem;
 }
-.m-article h2
+.m-article .m-article_content h2
 {
     font-size: 2.0rem;
     font-weight: bold;
@@ -129,32 +133,32 @@ module rule
 
     border-left: 10px solid #333;
 }
-.m-article h3
+.m-article .m-article_content h3
 {
     font-size: 1.8rem;
     font-weight: bold;
 
     border-bottom: 1px solid #999;
 }
-.m-article a
+.m-article .m-article_content a
 {
     text-decoration: underline; 
 
     color: #33a6b8;
 }
-.m-article a:hover
+.m-article .m-article_content a:hover
 {
     text-decoration: none;
 }
-.m-article p,
-.m-article pre,
-.m-article table,
-.m-article ul,
-.m-article ol
+.m-article .m-article_content p,
+.m-article .m-article_content pre,
+.m-article .m-article_content table,
+.m-article .m-article_content ul,
+.m-article .m-article_content ol
 {
     margin: 1.0rem 0;
 }
-.m-article pre
+.m-article .m-article_content pre
 {
     font-size: 1.6rem;
 
@@ -166,6 +170,64 @@ module rule
     background: #fafafa;
 }
 
+@media only screen and (min-width: 768px)
+{
+    .m-article
+    {
+        display: table;
+
+        width: 100%;
+    }
+    .m-article .m-article_date
+    {
+        display: table-cell;
+
+        width: 150px;
+    }
+    .m-article .m-article_content
+    {
+        display: table-cell;
+    }
+}
+/* .m-articleList
+----------------------------------------------------------*/
+.m-articleList .m-articleList_itemLink
+{
+    font-size: 1.8rem;
+}
+.m-articleList .m-articleList_itemLink:hover
+{
+    color: #33a6b8;
+    border-color: #33a6b8;
+}
+.m-articleList .m-articleList_itemDate
+{
+    font-weight: bold;
+}
+.m-articleList .m-articleList_itemTit
+{
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 768px)
+{
+    .m-articleList .m-articleList_itemLink
+    {
+        display: table;
+
+        width: 100%;
+    }
+    .m-articleList .m-articleList_itemDate
+    {
+        display: table-cell;
+
+        width: 120px;
+    }
+    .m-articleList .m-articleList_itemTit
+    {
+        display: table-cell;
+    }
+}
 /***********************************************************************
 theme rule
 **********************************************************************/

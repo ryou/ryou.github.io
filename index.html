@@ -25,15 +25,15 @@
   <!-- /.l-container -->
 
   <script type="text/x-template" id="link-component-template">
-    <router-link :to="article.url">
-      <p>{{ date.year }}</p>
-      <p>{{ article.title }}</p>
+    <router-link class="m-articleList_itemLink" :to="article.url">
+      <p class="m-articleList_itemDate">{{ date.getFullYear() }}.{{ date.getMonth() + 1 }}.{{ date.getDate() }}</p>
+      <p class="m-articleList_itemTit">{{ article.title }}</p>
     </router-link>
   </script>
   <script type="text/x-template" id="index-component-template">
     <div>
-      <ul>
-        <li v-for="article in dispArticles">
+      <ul class="m-articleList">
+        <li class="m-articleList_item" v-for="article in dispArticles">
           <link-component :article="article"></link-component>
         </li>
       </ul>
@@ -41,7 +41,13 @@
     </div>
   </script>
   <script type="text/x-template" id="posts-component-template">
-    <div class="m-article" v-html="content"></div>
+    <div class="m-article">
+      <p class="m-article_date">{{ dateObj.getFullYear() }}.{{ dateObj.getMonth() + 1 }}.{{ dateObj.getDate() }}</p>
+      <div class="m-article_main">
+        <div class="m-article_content" v-html="content"></div>
+      </div>
+      <!-- /.m-article_main -->
+    </div>
   </script>
   <script type="text/x-template" id="pager-component-template">
     <ul>

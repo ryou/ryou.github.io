@@ -68,12 +68,12 @@
             return '/posts/';
           },
           date: function() {
-            console.log(this.article.date);
-            return new Date(
-              this.article.date.split(0,4),
-              this.article.date.split(4,2),
-              this.article.date.split(6,2)
+            var date = new Date(
+              this.article.date.slice(0, 4),
+              this.article.date.slice(4, 6)-1,
+              this.article.date.slice(6, 8)
             );
+            return date;
           }
         }
       },
@@ -101,6 +101,14 @@
       },
       title: function() {
         return (this.$route.params.perma_link.split('__'))[1];
+      },
+      dateObj: function() {
+        var date = new Date(
+          this.date.slice(0, 4),
+          this.date.slice(4, 6)-1,
+          this.date.slice(6, 8)
+        );
+        return date;
       }
     },
     mounted: function() {
