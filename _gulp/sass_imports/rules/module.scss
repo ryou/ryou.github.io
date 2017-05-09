@@ -52,7 +52,7 @@ module rule
     a {
       @include linkTxt01;
     }
-    p, pre, table, ul, ol {
+    p, pre, table, ul, ol, blockquote {
       margin: 1.0rem 0;
     }
     pre {
@@ -61,6 +61,11 @@ module rule
       font-size: 1.6rem;
       padding: 0.5rem;
       overflow-x: scroll;
+    }
+    blockquote {
+      padding-left: 1.0em;
+      color: #777;
+      border-left: 0.25em solid #ccc;
     }
   }
 }
@@ -85,6 +90,9 @@ module rule
 ----------------------------------------------------------*/
 .m-articleList {
   .m-articleList_item {
+    &:not(:last-child) {
+      margin-bottom: 2.0rem;
+    }
   }
   .m-articleList_itemLink {
     font-size: 1.8rem;

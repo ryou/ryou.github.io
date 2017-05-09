@@ -156,7 +156,8 @@ module rule
 .m-article .m-article_content pre,
 .m-article .m-article_content table,
 .m-article .m-article_content ul,
-.m-article .m-article_content ol
+.m-article .m-article_content ol,
+.m-article .m-article_content blockquote
 {
     margin: 1.0rem 0;
 }
@@ -170,6 +171,13 @@ module rule
 
     border: 1px solid #999;
     background: #fafafa;
+}
+.m-article .m-article_content blockquote
+{
+    padding-left: 1.0em;
+
+    color: #777;
+    border-left: .25em solid #ccc;
 }
 
 @media only screen and (min-width: 768px)
@@ -197,6 +205,10 @@ module rule
 }
 /* .m-articleList
 ----------------------------------------------------------*/
+.m-articleList .m-articleList_item:not(:last-child)
+{
+    margin-bottom: 2.0rem;
+}
 .m-articleList .m-articleList_itemLink
 {
     font-size: 1.8rem;
