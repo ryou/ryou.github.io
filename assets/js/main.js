@@ -142,7 +142,7 @@
     },
     el: '#app',
     router: new VueRouter({
-      // mode: 'history',
+      mode: 'history',
       routes: [
         { path: '/', component: IndexComponent },
         { path: '/page/:index/', component: IndexComponent },
