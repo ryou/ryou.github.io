@@ -160,6 +160,10 @@
       })
       .then(
         function(json) {
+          if (json.meta.status !== 200) {
+            alert('記事リストの取得に失敗しました。')
+            return;
+          }
           json.data.forEach(function(e, i, a) {
             var tmp = e.name.split('__');
             var obj = {
