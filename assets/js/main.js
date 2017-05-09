@@ -62,10 +62,18 @@
     components: {
       'link-component': {
         props: ['article'],
-        template: '<router-link :to="article.url">{{ article.title }}</router-link>',
+        template: '#link-component-template',
         computed: {
           url: function() {
             return '/posts/';
+          },
+          date: function() {
+            console.log(this.article.date);
+            return new Date(
+              this.article.date.split(0,4),
+              this.article.date.split(4,2),
+              this.article.date.split(6,2)
+            );
           }
         }
       },

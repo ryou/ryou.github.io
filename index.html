@@ -24,6 +24,12 @@
   </div>
   <!-- /.l-container -->
 
+  <script type="text/x-template" id="link-component-template">
+    <router-link :to="article.url">
+      <p>{{ date.year }}</p>
+      <p>{{ article.title }}</p>
+    </router-link>
+  </script>
   <script type="text/x-template" id="index-component-template">
     <div>
       <ul>
